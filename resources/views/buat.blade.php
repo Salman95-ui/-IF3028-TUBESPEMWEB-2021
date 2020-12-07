@@ -12,7 +12,7 @@
 			<p>Buat Laporan/Komentar</p>
 			<hr>
 			
-			<form action="/utama" method="get" enctype="multipart/form-data" onsubmit="return validation()">
+			<form action="/process" method="post" enctype="multipart/form-data" onsubmit="return validation()">
 				{{csrf_field()}}
 			<textarea name="komentar" id="komentar">Laporan/Komentar</textarea>
 			
@@ -29,7 +29,7 @@
 
 			<p id="errAspek"></p>
 
-			<input type="file" style="padding: 15px;" name="">
+			<input type="file" style="padding: 15px;" name="file">
 
 			<div class="tombol">
 			<button type="submit"  onclick="test()">Buat Lapor!</button>

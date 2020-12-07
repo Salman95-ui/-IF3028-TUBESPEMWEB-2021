@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class CreateLaporTable extends Migration
 {
     /**
      * Run the migrations.
@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('komentar');
             $table->string('aspek');
             $table->string('file');
-            $table->dateTime('waktu');
+            $table->string('waktu');
         });
     }
 
