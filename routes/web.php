@@ -29,3 +29,7 @@ Route::get('/buat' , 'main@buat') ;
 Route::get('/detail' , 'main@detail') ;
 
 Route::post('/process' , 'data@process') ;
+
+Route::get('/detail/{id}' , 'main@datadetail') ;
+
+Route::get('/delete/{id}' , 'main@hapus');
