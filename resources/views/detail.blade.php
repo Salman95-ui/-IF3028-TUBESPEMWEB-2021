@@ -23,13 +23,16 @@
 				<div class="list-lampiran">
 					<p>Lampiran : </p>
 
-                    <img src="/file_data/{{$DATA->file}}" width="400px" height="400px">
+                    <img src="/file_data/{{$DATA->file}}" width="300px" height="300px">
 				</div>
 
 				<div class="list-nav">
-					<span class="aspek">{{$DATA->file}}   </span>
-                    <span>Aspek:{{$DATA->aspek}}</span>
-					<span class="nav1">Waktu {{$DATA->waktu}} <a href="/delete/{{$DATA->id}}">Hapus Laporan/Komentar</a></span>
+					<span class="aspek">Waktu: {{$DATA->waktu}}   </span>
+                    <span>Aspek: {{$DATA->aspek}}</span>
+					<span class="nav1">
+                        <a  href="/update/{{$DATA->id}}">Update | </a>
+                        <a  href="/delete/{{$DATA->id}}">Hapus Laporan/Komentar &#10008;</a>
+                    </span>
 				</div>
 
 				<hr>

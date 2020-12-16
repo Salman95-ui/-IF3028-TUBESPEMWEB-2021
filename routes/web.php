@@ -24,6 +24,8 @@ Route::get('/data' , function (){
 
 Route::get('/utama' , 'main@utama');
 
+Route::get('/' , 'main@utama');
+
 Route::get('/buat' , 'main@buat') ;
 
 Route::get('/detail' , 'main@detail') ;
@@ -33,3 +35,7 @@ Route::post('/process' , 'data@process') ;
 Route::get('/detail/{id}' , 'main@datadetail') ;
 
 Route::get('/delete/{id}' , 'main@hapus');
+
+Route::get('/update/{id}' , 'main@update');
+
+Route::post('/process/update/{id}' , 'main@updateproses');

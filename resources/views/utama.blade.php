@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="link">
-			<small><a href="#" >Buat Laporan/Komentar</a></small>
+			<small><a href="/buat" >Buat Laporan/Komentar</a></small>
 		</div>
 		<div class="list">
 

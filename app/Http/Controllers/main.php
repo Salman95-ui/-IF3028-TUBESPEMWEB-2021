@@ -41,6 +41,35 @@ class main extends Controller
         DB::table('lapor')->where('id' , $id)->delete() ;
        return redirect('/utama') ;
     }
+
+    public function update($id){
+        $data = DB::table('lapor')->where('id' , $id)->first();
+
+        return view('update' , ['data' => $data]) ;
+    }
+
+    public function updateproses(Request $request , $id){
+        $data = DB::table('lapor')->where('id' , $id)->first();
+
+        File::delete('file_data/' . $data->file) ;
+
+        $komentar = $request->komentar ;
+        $aspek  = $request->aspek ;
+        $file = $request->file('file');
+        $waktu = date("d-m-Y H:i");
+
+        $folder = "file_data" ;
+        $namafile = $file->getClientOriginalName();
+        $file->move($folder , $namafile);
+
+        DB::table('lapor')
+            ->where('id' , $id )
+            ->update(
+                ['komentar' => $komentar , 'aspek' => $aspek , 'file' => $namafile ,'waktu' => $waktu ]
+            );
+
+        return redirect('/detail/'. $id) ;
+    }
     
 
 }
