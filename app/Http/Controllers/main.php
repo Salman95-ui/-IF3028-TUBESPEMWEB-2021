@@ -8,19 +8,24 @@ use Illuminate\Support\Facades\DB;
 
 class main extends Controller
 {
-    //
-    public function utama(){
-        $data = DB::table('lapor')->get() ;
-    	return view('utama' , ['data' => $data ]) ;
+
+    public function utama()
+    {
+        $data = DB::table('lapor')->get();
+        return view('utama', ['data' => $data]);
+
     }
 
-    public function buat(){
-    	return view('buat') ;
+    public function buat()
+    {
+        return view('buat');
     }
 
-    public function detail(){
-    	return view('detail');
+    public function detail()
+    {
+        return view('detail');
     }
+
 
     public function datadetail($id){
         $data = DB::table('lapor')->where("id" , $id)->get();
@@ -37,4 +42,5 @@ class main extends Controller
        return redirect('/utama') ;
     }
     
+
 }
