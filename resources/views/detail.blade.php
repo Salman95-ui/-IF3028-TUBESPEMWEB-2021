@@ -31,7 +31,7 @@
                     <span>Aspek: {{$DATA->aspek}}</span>
 					<span class="nav1">
                         <a  href="/update/{{$DATA->id}}">Update | </a>
-                        <a  href="/delete/{{$DATA->id}}">Hapus Laporan/Komentar &#10008;</a>
+                        <a  href="/delete/{{$DATA->id}}" onclick="return confirm('Ingin menghapus data ?')">Hapus Laporan/Komentar &#10008;</a>
                     </span>
 				</div>
 
