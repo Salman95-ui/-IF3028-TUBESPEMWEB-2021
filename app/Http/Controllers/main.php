@@ -70,6 +70,23 @@ class main extends Controller
 
         return redirect('/detail/'. $id) ;
     }
+
+    public function data($data)
+    {
+
+        if ($data != "") {
+            $Data = DB::table('lapor')
+                ->where('komentar', 'like', "%" . $data . "%")
+                ->orWhere('aspek', 'like', "%" . $data . "%")
+                ->get();
+
+            return response()->json($Data);
+        }else if($data === "data"){
+            $Data = DB::table('lapor')->get();
+
+            return response()->json($Data) ;
+        }
+    }
     
 
 }

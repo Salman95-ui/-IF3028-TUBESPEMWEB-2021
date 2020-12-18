@@ -39,3 +39,5 @@ Route::get('/delete/{id}' , 'main@hapus');
 Route::get('/update/{id}' , 'main@update');
 
 Route::post('/process/update/{id}' , 'main@updateproses');
+
+Route::get('/data/{data}' , 'main@data') ;

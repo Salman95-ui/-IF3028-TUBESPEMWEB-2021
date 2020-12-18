@@ -9,7 +9,7 @@
 		<h2>SIMPLE LAPOR!</h2>
 
 		<div class="input-group">
-			<input type="text" name="search" placeholder="Filter .." >
+			<input type="text" onkeyup="getData()" id="search" name="search" placeholder="Filter .." >
 			<button>Search</button>
 		</div>
 
@@ -23,6 +23,7 @@
 				<hr>
 			</div>
 
+            <div id="data">
             @foreach($data as $DATA)
 			<div class="list-item">
 				<p>{{$DATA->komentar}}</p>
@@ -35,7 +36,9 @@
 				<hr>
 			</div>
                 @endforeach
+            </div>
 		</div>
 	</div>
+<script src="/js/utama.js"></script>
 </body>
 </html>
